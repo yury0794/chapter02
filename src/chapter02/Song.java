@@ -7,6 +7,23 @@ public class Song {
 	private String composer;
 	private int year;
 	private int track;
+	
+	public Song(String artist, String title){
+//		this.artist = artist;
+//		this.title = title;
+		this(artist, title, null, null, 0, 0);
+	}
+	
+	public Song(String artist, String title, String album, String composer, int year, int track){
+		this.artist = artist;
+		this.title = title;
+		this.album = album;
+		this.composer = composer;
+		this.year = year;
+		this.track = track;
+	}
+	
+	public Song(){}
 
 	public String getTitle() {
 		return title;
@@ -56,8 +73,7 @@ public class Song {
 		this.track = track;
 	}
 
-	@Override
-	public String toString() {
-		return artist + " " + title + " (" + album + ", " + year + ", " + track + "번 트랙, " + composer + " 작곡)";
+	public void show() {
+		System.out.println(artist + " " + title + " (" + album + ", " + year + ", " + track + "번 트랙, " + composer + " 작곡)");
 	}
 }

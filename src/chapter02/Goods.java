@@ -1,21 +1,26 @@
 package chapter02;
 
 public class Goods {
-	public static int countOfGoods;
+	private static int countOfGoods;
 	private String name;
 	private int price;
 	private int countStock;
 	private int countSold;
-	
-	public Goods(){
-		
+
+	public Goods() {
+		countOfGoods++;
 	}
-	
-	public Goods(String name, int price, int countStock, int countSold){
+
+	public Goods(String name, int price, int countStock, int countSold) {
+		countOfGoods++;
 		this.name = name;
 		this.price = price;
 		this.countStock = countStock;
 		this.countSold = countSold;
+	}
+
+	public static int getCountOfGoods() {
+		return countOfGoods;
 	}
 
 	public void setName(String name) {
@@ -52,10 +57,10 @@ public class Goods {
 	public String getName() {
 		return name;
 	}
-	
-	public void showInfo(){
-		System.out.println("[name = " + name + ", price = " + price
-				+ ", countStock = " + countStock + ", countSold = " + countSold + "]");
+
+	public void showInfo() {
+		System.out.println("[name = " + name + ", price = " + price + ", countStock = " + countStock + ", countSold = "
+				+ countSold + "]");
 	}
 
 	@Override
@@ -63,8 +68,8 @@ public class Goods {
 		return "Goods [name=" + name + ", price=" + price + ", countStock=" + countStock + ", countSold=" + countSold
 				+ "]";
 	}
-	
-	public int calcDiscountPrice(int percentage){
-		return price * percentage/100;
+
+	public int calcDiscountPrice(int percentage) {
+		return price * percentage / 100;
 	}
 }
