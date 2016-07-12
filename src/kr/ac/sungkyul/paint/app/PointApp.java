@@ -1,4 +1,8 @@
-package paint;
+package kr.ac.sungkyul.paint.app;
+
+import kr.ac.sungkyul.paint.app.I.Drawable;
+import kr.ac.sungkyul.paint.point.*;
+import kr.as.sungkyul.paint.shape.*;
 
 public class PointApp {
 

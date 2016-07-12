@@ -1,4 +1,6 @@
-package paint;
+package kr.ac.sungkyul.paint.point;
+
+import kr.ac.sungkyul.paint.app.I.Drawable;
 
 public class Point implements Drawable{
 	private int x;
